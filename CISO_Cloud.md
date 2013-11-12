@@ -24,7 +24,7 @@ Cloud security focuses on managing the different risks associated with abstracti
 
 Over time the focus shifts to hardening the cloud infrastructure, platforms, and applications, and then adapting security to use the cloud to *improve* security. For example, the need for data encryption increases over time the more you migrate sensitive data into the cloud. However, the complexities of internal network compartmentalization and server patching are dramatically reduced as you rely more on cloud infrastructure. 
 
-Eventually, we expect to see more security teams hook into the cloud fabric itself; bridging existing gaps between security tools and our infrastructure and applications with *Software Defined Security*. Using the same APIs and programming techniques that power cloud computing for highly-integrated dynamic, responsive security controls, and ([it is already being done today](https://securosis.com/research/publication/a-practical-example-of-software-defined-security)).
+Eventually, we expect to see more security teams hook into the cloud fabric itself; bridging existing gaps between security tools and their infrastructure and applications with *Software Defined Security*. They will use the same APIs and programming techniques that power cloud computing to develop highly-integrated, dynamic, responsive security controls, and [it is already being done today](https://securosis.com/research/publication/a-practical-example-of-software-defined-security).
 
 This series will lay out the key differences and suggestions on where security professionals should focus. Hopefully, by the end, you will look at cloud and cloud security in a new light, and definitely not consider cloud merely a new kind of outsourcing.
 
@@ -32,7 +32,7 @@ This series will lay out the key differences and suggestions on where security p
 
 In the early days of cloud computing, even some very well-respected security professionals claimed it was little more than a different kind of outsourcing, or akin to the multitenancy of a mainframe. The reality is the technology differences run far deeper, and as we will show these result in definitive changes in necessary cloud security controls. We know how to manage the risks of outsourcing or multi-user environments; cloud computing security builds on this foundation and adds some new twists. 
 
-The crux of these differences boil down to *abstraction* and *automation*. The two technology pieces that truly separate cloud computing from basic virtualization and other well-understood technologies.
+The crux of these differences boil down to *abstraction* and *automation*, the two technology pieces that truly separate cloud computing from basic virtualization and other well-understood technologies.
 
 ###Abstraction
 
@@ -77,7 +77,7 @@ Here are a few examples that highlight the impact of abstraction and automation 
 * **Management Credentials:** The entire infrastructure deployed on the cloud is managed, even down to the network and server level, using API calls and perhaps web interfaces. Administrator tools typically keep these credentials in memory as environment variables or the registry, making them accessible without administrative control over the cloud admin's workstation. Also, most clouds don't even provide an audit log of these commands. Many organizations fail to compartmentalize the rights of these cloud admins, opening up the entire infrastructure with a single compromised system.
 * **Software Defined Security:** With only 20 lines of code you can connect to your cloud over one API, your configuration management tool with another, and your security tool with a third. You can instantly assess the configuration and security of every server in your environment, without any scanning, in real time. This is nearly impossible with traditional security tools.
 
-Snapshots highlights some of the risks of abstraction. Autoscaling, some risks of automation, and management credentials, the risks of both. But we also show in our Software Defined Security and immutable server examples potential advantages. We will dig into these in the next section, and just wanted to highlight the core differences. 
+Snapshots highlight some of the risks of abstraction. Autoscaling, some risks of automation, and management credentials, the risks of both. But we also show in our Software Defined Security and immutable server examples potential advantages. We will dig into these in the next section, and just wanted to highlight the core differences. 
 
 All this without once mentioning multitenancy or outsourcing. 
 
@@ -89,10 +89,10 @@ These examples are far from comprehensive, but were selected to give a good star
 
 ###General Principles
 
-As we keep emphasizing, adopting cloud necessarily increase your overall risks; some increase, some decrease, and the goal is to leverage the security advantages of cloud so you can move resources to cover the new gaps. There are a few general principles of approaching the problem that help put you in the proper state of mind:
+As we keep emphasizing, adopting cloud doesn't necessarily increase your overall risks; some increase, some decrease, and the goal is to leverage the security advantages of cloud so you can move resources to cover the new gaps. There are a few general principles of approaching the problem that help put you in the proper state of mind:
 
 * *You cannot rely on boxes and wires.* A fair bit of our security relies on knowing the physical locations of systems, and the network cables connecting them. Network traffic in cloud computing is virtualized, which completely breaks this model. Network routing and security are defined instead using software rules. There are even some advantages here, which are beyond the scope of this paper and we will detail in future research. 
-* *Security should be as agile and elastic as the cloud itself.* Your security tools need to account for the highly dynamic nature of cloud, where servers might pop up automatically and only run for an hour before disappearing forever. 
+* *Security should be as agile and elastic as the cloud itself.* Your security tools need to account for the highly dynamic nature of cloud, where servers might pop up automatically and only run for an hour before disappearing forever.
 * *Rely more on policy-based automation.* Wherever possible, design your security to use the same automation as the cloud itself. For example, there are techniques to automate (virtual) firewall rules based on tags associated with a server, instead of applying them manually.
 * *Understand, and adjust for, the characteristics of the cloud.* Most virtual network adapters in cloud platforms disable network sniffing, so that risk drops off the list. *Security groups* are essentially virtual firewalls that surround every individual instance, meaning you get full internal firewalls and compartmentalization by default. Security tools can be embedded in images or installation scripts to ensure they are always installed, and cloud-aware ones can self configure. SAML can be used to provide absolute device and user authentication control to external SaaS applications. All of these (and more) are enabled by the cloud, once you understand cloud characteristics.
 * *Integrate with DevOps.* Not all organizations are using DevOps, but aspects of DevOps principles are pervasive in cloud computing. Security teams can integrate with this approach and leverage it themselves for security benefits, such as automating security configuration policy enforcement.
