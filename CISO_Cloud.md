@@ -1,9 +1,8 @@
-
 # What CISOs Need to Know About Cloud Computing
 
 ## Introduction
 
-As a CISO, one of the most difficult challenges is sorting the valuable wheat from the overhyped chaff, then figure out how it changes the risk to your organization. There are no shortage of technology and threat trends, and a CISO needs to not only determine which ones matter, but *how* they impact security. 
+As a CISO, one of the most difficult challenges is sorting the valuable wheat from the overhyped chaff, then figure out how it changes the risk to your organization. There is no shortage of technology and threat trends, and a CISO needs to not only determine which ones matter, but *how* they impact security. 
 
 The rise of cloud computing is one of those truly transformative evolutions that fundamentally changes some of the core practices of security. Far more than an outsourcing model, it alters the very fabric of our infrastructure and our technology consumption and delivery models. Combined with mobile computing, it is likely a more radical shift than our initial adoption of the Internet. 
 
